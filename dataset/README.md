@@ -1,62 +1,63 @@
-# Dataset Information
+# 🩺 Diabetic Retinopathy Classification
 
-## Dataset Name
+A deep learning project for classifying diabetic retinopathy
+from colored fundus retina images.
 
-Diabetic Retinopathy 2015 Data Colored Resized
+## 📌 Project Overview
 
-## Source
+Diabetic retinopathy is an eye disease associated with diabetes.
+This project prepares a fundus image dataset for machine learning
+classification.
 
-Kaggle Dataset:
+## 🗂️ Classes
+
+The dataset contains four classes:
+
+| Class | Description |
+|---|---|
+| No_DR | No diabetic retinopathy |
+| Mild | Mild diabetic retinopathy |
+| Moderate | Moderate diabetic retinopathy |
+| Severe | Severe diabetic retinopathy |
+
+## 🔧 Preprocessing
+
+The images were prepared using Python and Google Colab.
+
+- Image resizing: 224 × 224
+- Train/Test split: 80/20
+- Normalization: 0–1
+- Four-class classification
+
+## 📊 Dataset
+
+Dataset source:
+
 https://www.kaggle.com/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized
 
-## Dataset Description
+The complete dataset is approximately 2.0 GB and contains
+34,418 processed images.
 
-This project uses colored fundus retina images for diabetic
-retinopathy classification.
-
-## Classes
-
-The processed dataset contains four classes:
-
-- No_DR
-- Mild
-- Moderate
-- Severe
-
-## Preprocessing
-
-The images were processed using Google Colab and Python.
-
-### Image Size
-
-224 × 224 pixels
-
-### Train-Test Split
-
-80% Training  
-20% Testing
-
-### Normalization
-
-Pixel values are normalized from:
-
-0–255 → 0–1
-
-using:
-
-pixel / 255.0
-
-## Dataset Size
-
-Approximately 2.0 GB
-
-Number of processed images:
-
-34,418
-
-## Important Note
-
-The complete image dataset is not stored in this GitHub repository
+The full image dataset is not included in this GitHub repository
 because of its large size.
 
-The original dataset is available through Kaggle.
+## 📓 Notebook
+
+The complete preprocessing workflow is available here:
+
+`notebooks/diabetic_retinopathy.ipynb`
+
+## 📁 Repository Structure
+
+```text
+diabetic-retinopathy-classification/
+│
+├── README.md
+├── notebooks/
+│   └── diabetic_retinopathy.ipynb
+├── preprocessing/
+│   └── preprocessing.py
+├── dataset/
+│   └── README.md
+└── results/
+    └── sample_predictions/
